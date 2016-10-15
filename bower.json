@@ -1,0 +1,14 @@
+{
+  "name": "Angular",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7"
+    
+  },
+  "devDependencies": {}
+}
