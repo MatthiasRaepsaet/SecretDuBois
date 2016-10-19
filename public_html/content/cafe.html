@@ -26,7 +26,7 @@ and open the template in the editor.
             } 
         </style>
     </head>
-    <body ng-app="secret" ng-controller="KamersController" class="white-text grey darken-4">
+    <body ng-app="secret" ng-controller="CafeController" class="white-text grey darken-4">
         <nav>
             <div class="nav-wrapper grey darken-3">
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -42,6 +42,19 @@ and open the template in the editor.
             </div>
         </nav>
         <main class="">
+            <div class="container">
+                <h1 class="white-text">Cafe</h1>
+                <div class="" ng-repeat="post in cafePosts">
+                    <div class="grey darken-3 row" style="padding-left: 20px; padding-right: 20px">
+                        <br>
+                        <h5 class="">{{post.title}}</h5>
+                        <div class="s5"><p class="">{{post.content}}</p></div>
+                        <div class="s7"><img class="responsive-img z-depth-3 right-align" src="../images/cafe.png" width="400"></div>
+                        <br>
+                    </div>
+                    <br>
+                </div>
+            </div>
         </main>
         <footer class="page-footer grey darken-3">
             <div class="container">
