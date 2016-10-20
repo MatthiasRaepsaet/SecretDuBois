@@ -41,17 +41,18 @@ and open the template in the editor.
                 </ul>
             </div>
         </nav>
-        <main class="">
+        <main class="" style="background-image: url('../images/background_kamers.png'); background-repeat: no-repeat;
+              background-attachment: fixed; background-position: center; background-size: cover">
             <div class="container">
                 <h1>Kamers</h1>
-                <ul class="collapsible popout grey darken-4" data-collapsible="accordion">
+                <ul class="collapsible popout lime darken-3" data-collapsible="accordion">
                     <li ng-repeat="kamer in kamers" class="grey darken-4">
-                        <div class="collapsible-header  {{kamer.kleur}}">{{kamer.title}}</div>
+                        <div class="collapsible-header  {{kamer.kleur}} black-text" style="font-size: 20px;  ">{{kamer.title}}</div>
                         <div class="collapsible-body {{kamer.kleur}}">
                             <br>
                             <div class="row">
-                                <div class='col s7 '><p id="inhoud" class="z-depth-3 black-text {{kamer.highkleur}}">{{kamer.huidig}}</p>
-                                    <a class="waves-effect waves-light btn" id="meerBtn" ng-click="clickButton(kamer)">{{kamer.buttonState}}</a>
+                                <div class='col s7 '><p id="inhoud" class="z-depth-3 black-text {{kamer.highkleur}}">{{kamer.long}}</p>
+                                    <!--<a class="waves-effect waves-light btn" id="meerBtn" ng-click="clickButton(kamer)">{{kamer.buttonState}}</a>-->
                                     <br>
                                 </div>
                                 <div class='col s4'><img class="responsive-img z-depth-3" src="{{kamer.imgurl}}"></div>
