@@ -42,42 +42,40 @@ and open the template in the editor.
             </div>
         </nav>
         <main class="">
-        <div class="container">
-            <h1>Kamers</h1>
-            <ul class="collapsible popout" data-collapsible="accordion">
-                <li ng-repeat="kamer in kamers">
-                    <div class="collapsible-header  {{kamer.kleur}}">{{kamer.title}}</div>
-                    <div class="collapsible-body {{kamer.kleur}}">
-                        <br>
-                        <div class="row">
-                            <div class='col s7 '><p id="inhoud" class="z-depth-3 black-text {{kamer.highkleur}}">{{kamer.short}} 
-                                </p>
-                                <p><a class="waves-effect waves-light btn" id="meerBtn" ng-click="toonMeer(kamer)">Lees Meer</a></p>
-                                <p><a class="waves-effect waves-light btn" id="minderBtn" ng-click="toonMinder(kamer)">Lees Minder</a></p>
-                                <br>
+            <div class="container">
+                <h1>Kamers</h1>
+                <ul class="collapsible popout grey darken-4" data-collapsible="accordion">
+                    <li ng-repeat="kamer in kamers" class="grey darken-4">
+                        <div class="collapsible-header  {{kamer.kleur}}">{{kamer.title}}</div>
+                        <div class="collapsible-body {{kamer.kleur}}">
+                            <br>
+                            <div class="row">
+                                <div class='col s7 '><p id="inhoud" class="z-depth-3 black-text {{kamer.highkleur}}">{{kamer.huidig}}</p>
+                                    <a class="waves-effect waves-light btn" id="meerBtn" ng-click="clickButton(kamer)">{{kamer.buttonState}}</a>
+                                    <br>
+                                </div>
+                                <div class='col s4'><img class="responsive-img z-depth-3" src="{{kamer.imgurl}}"></div>
+                                <div class='col s1'></div>
                             </div>
-                            <div class='col s4'><img class="responsive-img z-depth-3" src="{{kamer.imgurl}}"></div>
-                            <div class='col s1'></div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                    </li>
+                </ul>
+            </div>
         </main>
         <footer class="page-footer grey darken-3">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                        <h5 class="white-text">Le Secret du Bois</h5>
+                        <p class="grey-text text-lighten-4">Ontdek het geheim!</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#http://www.facebook.com/">Facebook</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,7 +83,7 @@ and open the template in the editor.
             <div class="footer-copyright">
                 <div class="container">
                     © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    
                 </div>
             </div>
         </footer>
