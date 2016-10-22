@@ -50,7 +50,7 @@ app.factory('keukenPosts', [function () {
                                           Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,\n\
                                           dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.\n\
                                           Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui."},
-                {title: "Cafe", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\n\
+                {title: "", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\n\
                                           Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\
                                           Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,\n\
                                           fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n\
@@ -87,7 +87,7 @@ app.controller("CafeController", [
 ]);
 
 app.controller("KeukenController", [
-    '$scope', 'kamers', function ($scope, kamers) {
-
+    '$scope', 'keukenPosts', function ($scope, keukenPosts) {
+        $scope.keukenPosts = keukenPosts.keukenPosts;
     }
 ]);
