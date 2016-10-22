@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 var app = angular.module("secret", []);
+$(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
 app.factory('kamers', [function () {
        
         var k = {
