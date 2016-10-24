@@ -46,9 +46,9 @@ and open the template in the editor.
              
             <div class="container">
                 <h1>Kamers</h1>
-                <ul class="collapsible popout lime darken-3" data-collapsible="accordion">
+                <ul class="collapsible popout grey darken-4" data-collapsible="accordion">
                     <li ng-repeat="kamer in kamers" class="grey darken-4">
-                        <div class="collapsible-header  {{kamer.kleur}} black-text" style="font-size: 20px;  ">{{kamer.title}}</div>
+                        <div class="collapsible-header  {{kamer.kleur}} black-text {{kamer.state}}" style="font-size: 20px;  ">{{kamer.title}}</div>
                         <div class="collapsible-body {{kamer.kleur}}">
                             <br>
                             <div class="row">
