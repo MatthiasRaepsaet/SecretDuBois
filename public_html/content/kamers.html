@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <title>Le Secret du bois - B&B</title>
         <link rel="stylesheet" href="../mycss.css">
+        <link rel='icon' href="../images/faviSecretDuBois.PNG">
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
         <script src="../bower_components/jquery/dist/jquery.min.js"></script>
         <script src="../bower_components/materialize/dist/js/materialize.min.js"></script>
@@ -34,20 +35,19 @@ and open the template in the editor.
                     <li><a href="kamers.html" class="grey darken-4">Kamers</a></li>
                     <li><a href="cafe.html">Caf&eacute;</a></li>
                     <li><a href="keuken.html" >Keuken</a></li>
-                    <li><a href="arrangementen.html">Arrangementen</a></li>
                     <li><a href="activiteiten.html">Activiteiten</a></li>
                     <li><a href="contact.html">Contact & Info</a></li>
                     <li><a href="gallerij.html">Foto's</a></li>
                 </ul>
             </div>
         </nav>
-        <main class="" style="background-image: url('../images/background_kamers.png'); background-repeat: no-repeat;
-              background-attachment: fixed; background-position: center; background-size: cover">
+        <main class="grey darken-4"><!--style="background-image: url('../images/background_kamers.png'); background-repeat: no-repeat;background-attachment: fixed; background-position: center; background-size: cover"-->
+             
             <div class="container">
                 <h1>Kamers</h1>
-                <ul class="collapsible popout lime darken-3" data-collapsible="accordion">
+                <ul class="collapsible popout grey darken-4" data-collapsible="accordion">
                     <li ng-repeat="kamer in kamers" class="grey darken-4">
-                        <div class="collapsible-header  {{kamer.kleur}} black-text" style="font-size: 20px;  ">{{kamer.title}}</div>
+                        <div class="collapsible-header  {{kamer.kleur}} black-text {{kamer.state}}" style="font-size: 20px;  ">{{kamer.title}}</div>
                         <div class="collapsible-body {{kamer.kleur}}">
                             <br>
                             <div class="row">
@@ -73,7 +73,7 @@ and open the template in the editor.
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#http://www.facebook.com/">Facebook</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#https://www.facebook.com/lesecretdubois/">Facebook</a></li>
                             <li><a class="grey-text text-lighten-3" href="#!"></a></li>
                             <li><a class="grey-text text-lighten-3" href="#!"></a></li>
                             <li><a class="grey-text text-lighten-3" href="#!"></a></li>
@@ -84,7 +84,7 @@ and open the template in the editor.
             <div class="footer-copyright">
                 <div class="container">
                     © 2014 Copyright Text
-                    
+
                 </div>
             </div>
         </footer>
