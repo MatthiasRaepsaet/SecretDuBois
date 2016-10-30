@@ -6,6 +6,15 @@
 var app = angular.module("secret", []);
 $(document).ready(function () {
     $('.slider').slider({full_width: true});
+    var uluru = {lat: 50.0218986, lng: 4.8678663};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
 });
 app.factory('kamers', [function () {
 

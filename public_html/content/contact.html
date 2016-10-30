@@ -24,10 +24,15 @@ and open the template in the editor.
 
             main {
                 flex: 1 0 auto;
-            } 
+            }
+
+            #map {
+                height: 400px;
+                width: 100%;
+            }
         </style>
     </head>
-    <body ng-app="secret" ng-controller="KamersController" class="white-text grey darken-4">
+    <body ng-app="secret" ng-controller="" class="white-text grey darken-4">
         <nav>
             <div class="nav-wrapper grey darken-3">
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -35,7 +40,6 @@ and open the template in the editor.
                     <li><a href="kamers.html">Kamers</a></li>
                     <li><a href="cafe.html">Caf&eacute;</a></li>
                     <li><a href="keuken.html">Keuken</a></li>
-                    <li><a href="arrangementen.html">Arrangementen</a></li>
                     <li><a href="activiteiten.html">Activiteiten</a></li>
                     <li><a href="contact.html" class="grey darken-4">Contact & Info</a></li>
                     <li><a href="gallerij.html">Foto's</a></li>
@@ -44,23 +48,36 @@ and open the template in the editor.
         </nav>
         <main class="">
             <div class="container">
-                
+                <h1>Contact</h1>
+                <div class="grey darken-3 row z-depth-3" style="padding-left: 20px; padding-right: 20px">
+                    <br>
+                    <div class="col s8">
+                        <ul>
+                            <li>Tel: 061 61 17 61</li>
+                            <li>Adres: Rue du Sacre Coeur 4, Bourseinge-Veille</li>
+                            <li>E-mail: </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col s4 right-align" style="margin-bottom: 20px"><div id="map"></div></div>
+                    <br>
+                </div>
             </div>
         </main>
         <footer class="page-footer grey darken-3">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                        <h5 class="white-text">Le Secret du Bois</h5>
+                        <p class="grey-text text-lighten-4">Ontdek het geheim!</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#https://www.facebook.com/lesecretdubois/">Facebook</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -68,9 +85,11 @@ and open the template in the editor.
             <div class="footer-copyright">
                 <div class="container">
                     © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
             </div>
         </footer>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4PCgBApMloGM8DFSXnvDy1uo17fL5WXA&callback=initMap">
+        </script>
     </body>
 </html>
