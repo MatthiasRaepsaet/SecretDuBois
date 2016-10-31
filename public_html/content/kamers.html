@@ -42,9 +42,17 @@ and open the template in the editor.
             </div>
         </nav>
         <main class="grey darken-4"><!--style="background-image: url('../images/background_kamers.png'); background-repeat: no-repeat;background-attachment: fixed; background-position: center; background-size: cover"-->
-             
+
             <div class="container">
-                <h1>Kamers</h1>
+                <h1 class="lime-text darken-4">Kamers</h1>
+                <div class="" style="padding-left: 20px; padding-right: 20px">
+                    <div class="col "><p class="">
+                            De 4 stijlvolle gastenkamers zijn voorzien van zeer comfortabele bedden, waarvan 2 kamers met boxspring en 2 met smeedijzeren bedden. In de 2 grootste kamers op de voorkant van de herenhoeve kan men nog 2 maal een 1 persoonsbed bijzetten. ( kinderen tot 12 jaar )
+                            De uitgestrekte bossen van de Naamse Ardennen omhullen vele geheimen waarvan we er een aantal prijsgeven in de benaming van onze kamers. 	
+                        </p>
+                    </div>
+                </div>
+                <br>
                 <ul class="collapsible popout grey darken-4" data-collapsible="accordion">
                     <li ng-repeat="kamer in kamers" class="grey darken-4">
                         <div class="collapsible-header  {{kamer.kleur}} black-text {{kamer.state}}" style="font-size: 20px;  ">{{kamer.title}}</div>
