@@ -46,7 +46,7 @@ and open the template in the editor.
             <div class="container">
                 <h1 class="lime-text darken-4">Kamers</h1>
                 <div class="" style="padding-left: 20px; padding-right: 20px">
-                    <div class="col "><p class="">
+                    <div class="col " ><p class="">
                             De 4 stijlvolle gastenkamers zijn voorzien van zeer comfortabele bedden, waarvan 2 kamers met boxspring en 2 met smeedijzeren bedden. In de 2 grootste kamers op de voorkant van de herenhoeve kan men nog 2 maal een 1 persoonsbed bijzetten. ( kinderen tot 12 jaar )
                             De uitgestrekte bossen van de Naamse Ardennen omhullen vele geheimen waarvan we er een aantal prijsgeven in de benaming van onze kamers. 	
                         </p>
@@ -55,15 +55,17 @@ and open the template in the editor.
                 <br>
                 <ul class="collapsible popout grey darken-4" data-collapsible="accordion">
                     <li ng-repeat="kamer in kamers" class="grey darken-4">
-                        <div class="collapsible-header  {{kamer.kleur}} black-text {{kamer.state}}" style="font-size: 20px;  ">{{kamer.title}}</div>
+                        <div class="collapsible-header {{kamer.kleur}} black-text {{kamer.state}}" style="font-size: 20px;">{{kamer.title}} - {{kamer.klasse}}</div>
                         <div class="collapsible-body {{kamer.kleur}}">
                             <br>
                             <div class="row">
-                                <div class='col s7 '><p id="inhoud" class="z-depth-3 black-text {{kamer.highkleur}}">{{kamer.long}}</p>
-                                    <!--<a class="waves-effect waves-light btn" id="meerBtn" ng-click="clickButton(kamer)">{{kamer.buttonState}}</a>-->
+                                <div class='col s7 '>
+                                    <div id="{{kamer.facId}}"><img ng-repeat="fac in kamer.faciliteiten" src="{{fac}}" class="responsive-img" style="width: 80px"></div>
+                                    <p id="{{kamer.id}}" class="z-depth-3 black-text {{kamer.highkleur}}">Prijs voor 2 personen: {{kamer.prijs}}<br>Supplement voor 1 persoon: {{kamer.prijsSupplement}}</p>
                                     <br>
+                                    <a id="{{kamer.buttonId}}" class="waves-effect waves-light btn"  ng-click="clickButton(kamer)">Ontdek het geheim!</a>
                                 </div>
-                                <div class='col s4'><img class="responsive-img z-depth-3" src="{{kamer.imgurl}}"></div>
+                                <div class='col s4'><img id="{{kamer.imgId}}" class="responsive-img z-depth-3" src="{{kamer.imgurl}}"></div>
                                 <div class='col s1'></div>
                             </div>
                         </div>
